@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BdWorld | Oxy Club</title><!-- Google Font for Bengali --><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet"><style>
+body {
+    margin: 0;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    background: #f0f4ff;
+    color: #0d223f;
+}
+
+header {
+    background: #0d223f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #ffd700;
+    border-radius: 0 0 20px 20px;
+}
+
+header img {
+    max-height: 60px;
+    margin-bottom: 10px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #ffd700;
+}
+
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0d223f;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 12px;
+    background: #ffd700;
+    color: #0d223f;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #e6c200;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #0d223f;
+    text-decoration: none;
+    font-weight: 500;
+    border: 2px solid #0d223f;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    background: #0d223f;
+    color: #ffd700;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.slides {
+    display: flex;
+    transition: 0.5s;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
+    background: #f0f4ff;
+    margin-top: 40px;
+}
+</style></head><body><header>
+    <!-- Logo Upload -->
+    <img src="logo.png" alt="BdWorld Oxy Club Logo">
+    <p>প্রোমো কোড: <b>Oxy11</b></p>
+</header><div class="container"><!-- Slider -->
+<div class="slider">
+    <div class="slides" id="slideBox">
+        <!-- Slide Logos Upload -->
+        <img src="slide1.png" alt="Slide 1 Logo">
+        <img src="slide2.png" alt="Slide 2 Logo">
+        <img src="slide3.png" alt="Slide 3 Logo">
+    </div>
+    <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+    <button class="nav-btn next" onclick="nextSlide()">❯</button>
+</div>
+
+<!-- Login CTA Card -->
+<div class="card">
+    <h2>🎯 এখনই লগইন করুন</h2>
+    <p>সেরা বেটিং অভিজ্ঞতার জন্য এখনই লগইন করুন</p>
+    <a class="btn" href="https://refpa3267686.top/L?tag=d_905607m_1622c_2023&site=905607&ad=1622">Login</a>
+</div>
+
+<!-- Contact -->
+<div class="contact">
+    <h3>📞 যোগাযোগ করুন</h3>
+    <a href="https://wa.me/8801826444505" target="_blank">WhatsApp</a>
+    <a href="https://imo.im/8801826444505" target="_blank">IMO Chat</a>
+    <p>নম্বর: 01826444505</p>
+</div>
+
+</div><div class="footer">
+    © 2026 BdWorld Oxy Club | সর্বস্বত্ব সংরক্ষিত
+</div><script>
+let index = 0;
+
+function showSlide(i) {
+    const slides = document.getElementById('slideBox');
+    const total = slides.children.length;
+    if(i >= total) index = 0;
+    if(i < 0) index = total - 1;
+    slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+}
+
+function nextSlide() {
+    index++;
+    showSlide(index);
+}
+
+function prevSlide() {
+    index--;
+    showSlide(index);
+}
+
+setInterval(() => {
+    index++;
+    showSlide(index);
+}, 4000);
+</script></body>
+</html>
